@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+    background-color: aquamarine;
+    text-align: center;
+}
+.container h2{
+    text-align: center;
+    width: 500px;
+    background-color: burlywood;
+    color: crimson;
+    padding: 5px 60px;
+    margin: 100px 0px;
+    font-family: Arial;
+
+}
+.laCo{
+    margin-left: 300px;
+    background-color: #63ff00;
+    width: 600px;
+    height: auto;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>tuệ</h1>
+    <center><h2>TRẦN ĐÌNH TUỆ</h2></center>
+<div class="laCo">
+<canvas id="myCanvas"width="600px" height="400px" style="border: hotpink 1px" ></canvas></div>
+</div>
+<script>
+    function HinhChuNhat(x,y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    function veHCN() {
+        let ctx = document.getElementById("myCanvas").getContext('2d');
+        // let a = Math.floor(Math.random()*500);
+        // let b = Math.floor(Math.random()*300);
+        let ve = new HinhChuNhat(500,300);
+        ctx.fillStyle = "rgb(250,0,0)";
+        ctx.fillRect(0, 0, ve.x, ve.y);
+        ctx.beginPath();
+        ctx.fillStyle   = "yellow";
+        ctx.moveTo(250,80);
+        ctx.lineTo(200,200);
+        ctx.lineTo(320,125);
+        ctx.lineTo(180,125);
+        ctx.lineTo(300,200);
+        ctx.lineTo(250,80);
+        ctx.closePath();
+        ctx.fill();
+        document.write("Diện tích HCN là " + a * b + '<br>');
+        document.write("Chu vi HCN là " + (a + b) * 2);
+    }
+    veHCN();
+
+</script>
+</body>
+</html>

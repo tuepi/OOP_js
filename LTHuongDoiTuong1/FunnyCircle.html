@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="15000px" height="8000px" style="border: 1px solid #63ff00;"></canvas>
+<script>
+ function Circle(x, y, radius) {
+     this.x = x;
+     this.y = y;
+     this.radius = radius;
+ }
+ function createCircle(){
+     let ctx = document.getElementById("myCanvas").getContext("2d");
+     let circle = new Circle(500,500,80);
+     ctx.fillStyle = "#ff1e00";
+     ctx.beginPath();
+     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+     ctx.fill();
+ }
+ createCircle();
+
+ function Circle1(x,y,radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+ }
+ function createCircle1() {
+     let  ctx = document.getElementById("myCanvas").getContext("2d");
+     let radius = Math.floor(Math.random() * 200);
+     let circle = new Circle1(400, 400, radius);
+     ctx.fillStyle = "green";
+     ctx.beginPath();
+     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+     ctx.fill();
+ }
+ createCircle1();
+
+ // function Circle2(x,y,radius) {
+ //     this.x = x;
+ //     this.y = y;
+ //     this.radius = radius;
+ // }
+ function getRandomHex() {
+     return Math.floor(Math.random() * 255);
+ }
+ function getRandomColor() {
+     let red = getRandomHex();
+     let green = getRandomHex();
+     let blue = getRandomHex();
+        return 'rgb(' + red + ',' + green + ',' + blue + ')';
+ }
+ function createCircle2() {
+     let ctx = document.getElementById("myCanvas").getContext('2d');
+     let x = Math.floor(Math.random() * window.innerWidth);
+     let y = Math.floor(Math.random() * window.innerHeight);
+
+     //???? let circle = new Circle2(x,y,radius);????????
+
+     let radius = Math.floor(Math.random()*100);
+     let color = getRandomColor();
+     ctx.beginPath();
+     ctx.arc(x,y,radius,0,2*Math.PI);
+     ctx.fillStyle = color;
+     ctx.fill();
+ }
+ for (let i = 0; i < 10; i++) {
+     createCircle2();
+ }
+</script>
+</body>
+</html>

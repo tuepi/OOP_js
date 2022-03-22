@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<img src="cho1.jpg" id="conCho" style="position: absolute; top: 300px; left: 100px; border-radius: 50%">
+<script>
+    let img = document.getElementById("conCho");
+    let speedX = 10;
+    let speedY = 10;
+    function di() {
+        img.style.left = parseInt(img.style.left) + speedX + 'px';
+        img.style.top = parseInt(img.style.top) + speedY + 'px';
+        if (parseInt(img.style.left) >= window.innerWidth - 100 || parseInt(img.style.left)<0) {
+            speedX = -speedX;
+        }
+        if (parseInt(img.style.top) >= window.innerHeight - 100 || parseInt(img.style.top)<0) {
+            speedY = -speedY;
+        }
+        requestAnimationFrame(di);
+    }
+    di();
+</script>
+</body>
+</html>
